@@ -20,5 +20,7 @@ spec:
         name: hello-world
         ports:
         - containerPort: 5000
-        resources: {}
+      volumes:
+        - name: cache-volume
+        emptyDir: {}
 status: {}
