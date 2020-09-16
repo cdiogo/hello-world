@@ -3,12 +3,12 @@ kind: Service
 metadata:
   annotations:
   labels:
-    name: service-test
-  name: service-test
+    name: hello-service
+  name: hello-service
 spec:
   ports:
   - name: http-service
-    port: 80
+    port: 5000
     protocol: TCP
     targetPort: 5000
   selector:

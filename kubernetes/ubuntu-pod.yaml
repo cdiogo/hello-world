@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: ubuntu
+  name: ubuntu
+spec:
+  tolerations:
+    - effect: NoSchedule
+      operator: Exists
+    - effect: NoExecute
+      operator: Exists
+    - effect: PreferNoSchedule
+      operator: Exists
+  containers:
+  - args:
+    - sleep
+    - "3600"
+    image: ubuntu
+    name: ubuntu
+    resources: {}
+  restartPolicy: Always
