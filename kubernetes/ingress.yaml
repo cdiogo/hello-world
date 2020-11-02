@@ -1,14 +1,14 @@
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  name: hello-ingress
-  annotations:
-    kubernetes.io/ingress.class: internal-microservices
-spec:
-  rules:
-  - host: hello-world.ms.qa
-    http:
-      paths:
-      - backend:
-          serviceName: hello-service
-          servicePort: 5000
+# apiVersion: extensions/v1beta1
+# kind: Ingress
+# metadata:
+#   name: hello-ingress
+#   annotations:
+#     kubernetes.io/ingress.class: internal-microservices
+# spec:
+#   rules:
+#   - host: hello-world.ms.qa
+#     http:
+#       paths:
+#       - backend:
+#           serviceName: hello-service
+#           servicePort: 5000
