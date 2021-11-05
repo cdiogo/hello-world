@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  api:
+    build:
+      context: .
+    image: python:dev
+    restart: always
+    command: flask run --host=0.0.0.0 --port=8080
+    environment:
+      FLASK_APP: hello.py
+    ports:
+      - "8080:8080"
+    volumes:
+      - "./:/app"
