@@ -7,9 +7,13 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
 
-    return_msg = {"message": "Hello!!!!",
-                  "hostname": str(socket.gethostname())
-                  }
+    return_msg = {"message": "Working"}
+
+    return jsonify(return_msg)
+
+@app.route("/hello/<name>")
+def hello_name(name):
+    return_msg = {"message": f"Hello {name}"}
 
     return jsonify(return_msg)
 
