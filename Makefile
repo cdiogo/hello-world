@@ -8,5 +8,5 @@ run: ## Run the application capturing user console to put the input
 
 up: build run
 
-run_tests:
-	docker compose run --rm $(APP_NAME) python3 /app/tests.py
+run_tests: ## NEED TO BE CREATED
+	docker-compose run --rm  api python3 /app/tests.py
